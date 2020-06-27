@@ -1,5 +1,15 @@
 import React from "react";
 import { useQuery } from "urql";
+import gql from "graphql-tag";
+
+export const AllUsersQuery = gql`
+  query AllUsers {
+    allUsers {
+      id
+      name
+    }
+  }
+`;
 
 type AllUsersData = {
   allUsers: {
